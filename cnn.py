@@ -20,6 +20,6 @@ def train_model(model, x_train, y_train, batch_size=64, epochs=5, validation_spl
     model.compile(optimizer='adam', loss='categorical_crossentropy', metrics=['accuracy'])
     # model.summary()
 
-    history = model.fit(x_train, y_train, batch_size=batch_size, epochs=epochs, validation_split=validation_split)
+    history = model.fit(x_train, y_train, batch_size=batch_size, epochs=epochs, validation_split=validation_split, shuffle=True)
 
     return model, history
